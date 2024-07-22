@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import dynamic from "next/dynamic";
 import "./customcursor.scss";
 
 const CustomCursor = () => {
@@ -23,25 +24,21 @@ const CustomCursor = () => {
         clientX - (cursorSm.current?.clientWidth / 2 || 0);
       positionRef.current.mouseY =
         clientY - (cursorSm.current?.clientHeight / 2 || 0);
-      positionRef.current.mouseX =
+      positionRef.current.destinationX =
         clientX - (cursorLg.current?.clientWidth / 2 || 0);
-      positionRef.current.mouseY =
+      positionRef.current.destinationY =
         clientY - (cursorLg.current?.clientHeight / 2 || 0);
     };
 
     const isClient =
-      typeof window !== "undefined" && typeof document != "undefined";
+      typeof window !== "undefined" && typeof document !== "undefined";
     if (isClient) {
       window.document?.addEventListener("mousemove", updateMousePosition);
-    } else {
-      console.log("Running on server");
     }
 
     return () => {
       if (isClient) {
         window.document?.removeEventListener("mousemove", updateMousePosition);
-      } else {
-        console.log("Running on server");
       }
     };
   }, []);
@@ -81,7 +78,6 @@ const CustomCursor = () => {
       }
     };
     followMouse();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     return () => cancelAnimationFrame(positionRef.current.key);
   }, []);
 
@@ -93,4 +89,4 @@ const CustomCursor = () => {
   );
 };
 
-export default CustomCursor;
+export default dynamic(() => Promise.resolve(CustomCursor), { ssr: false });

@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { Link, NavLink } from "react-router-dom";
 import Link from "next/link";
 import SocialWidget from "../Widget/SocialWidget";
 import Newsletter from "../Widget/Newsletter";
@@ -9,29 +8,36 @@ import "./header.scss";
 import ContactInfoWidget from "../Widget/ContactInfoWidget";
 import Div from "../Div";
 import DropDown from "./DropDown";
+import dynamic from "next/dynamic";
 
-export default function Header({ variant }) {
+const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
+      if (typeof window !== "undefined") {
+          if (window.scrollY > 0) {
+            setIsSticky(true);
+          } else {
+            setIsSticky(false);
+          }
+          }}
+      
+    
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, []);
 
   return (
     <>
       <header
         className={`cs-site_header cs-style1 text-uppercase ${
-          variant ? variant : ""
+          "cs-site_header_full_width" ? "cs-site_header_full_width" : ""
         } cs-sticky_header ${isSticky ? "cs-sticky_header_active" : ""}`}
       >
         <Div className="cs-main_header">
@@ -39,8 +45,8 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" href="/">
-                <h2 className="footerHead">AK <span>Stack</span></h2>
-                <p>Software Development agency</p>
+                  <h2 className="footerHead">AK <span>Stack</span></h2>
+                  <p>Software Development agency</p>
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
@@ -159,7 +165,7 @@ export default function Header({ variant }) {
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_shape" />
           <Link className="cs-site_branding" href="/">
-          <h2 className="footerHead">AK <span>Stack</span></h2>
+            <h2 className="footerHead">AK <span>Stack</span></h2>
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">
@@ -176,10 +182,11 @@ export default function Header({ variant }) {
               placeholder="example@gmail.com"
             />
           </Div>
-          <Div className="cs-side_header_box">
-          </Div>
+          <Div className="cs-side_header_box"></Div>
         </Div>
       </Div>
     </>
   );
-}
+};
+
+export default dynamic(() => Promise.resolve(Header), { ssr: false });
