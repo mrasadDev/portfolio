@@ -1,4 +1,4 @@
-"use client";
+
 import PageTitleSection from "../section/PageTitleSection";
 import StepSection from "../section/StepSection";
 import { steps } from "../../data/services/website-development";

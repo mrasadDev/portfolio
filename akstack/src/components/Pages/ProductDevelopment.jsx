@@ -1,4 +1,4 @@
-"use client";
+
 import { websiteInfo } from "../../data/website-info";
 import { steps } from "../../data/services/digital-product-development";
 import PageTitleSection from "../section/PageTitleSection";

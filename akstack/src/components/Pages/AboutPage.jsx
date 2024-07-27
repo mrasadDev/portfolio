@@ -1,4 +1,3 @@
-"use client";
 import Cta from "../../components/Cta";
 import Div from "../../components/Div";
 import SeperatorArea from "../../components/service/SeperatorArea"

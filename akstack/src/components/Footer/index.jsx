@@ -1,4 +1,3 @@
-"use client";
 import Div from "../Div";
 import ContactInfoWidget from "../Widget/ContactInfoWidget";
 import MenuWidget from "../Widget/MenuWidget";

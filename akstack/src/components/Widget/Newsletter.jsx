@@ -1,4 +1,4 @@
-"use client";
+
 import Div from "../Div";
 import  { useState } from "react";
 import { useForm } from "react-hook-form";
