@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Slider from 'react-slick';
 import { Icon } from '@iconify/react';
 import Testimonial from '../Testimonial';
@@ -9,35 +9,31 @@ export default function TestimonialSlider() {
   const [nav2, setNav2] = useState();
   const testimonialData = [
     {
-      testimonialThumb: '/images/testimonial_1.jpeg',
+      testimonialThumb: '/images/testimonial_1.jpg',
       testimonialText:
-        'Im a medical student and the report I had to submit for my final project was very complex. yourprojects.ai made it so much easier for me, the report was ready in a matter of seconds and I got an A! Thank you!',
-      avatarName: 'Sarah',
-      avatarDesignation: 'Medical Student',
+        'Ak Stack.ai delivered an exceptional product ahead of schedule. Their professionalism and expertise are unmatched',
+      avatarName: 'Marco',
       ratings: '4',
     },
     {
-      testimonialThumb: '/images/testimonial_2.jpeg',
+      testimonialThumb: '/images/testimonial_2.jpg',
       testimonialText:
-        'Im an engineering student and always struggle with report writing. yourprojects.ai made the process so much easier and quicker, I was able to focus on my studies and still get a great report.',
+        'Ak stack.ai transformed our ideas into a seamless application. Exceptional work and timely delivery!.',
       avatarName: 'David',
-      avatarDesignation: 'Engineering Student.',
       ratings: '5',
     },
     {
-      testimonialThumb: '/images/testimonial_3.jpeg',
+      testimonialThumb: '/images/testimonial_3.jpg',
       testimonialText:
-        'Im a science student and had a tight deadline for my final project report. yourprojects.ai made it possible for me to submit the report on time and get a great grade.',
-      avatarName: 'Emily',
-      avatarDesignation: 'Science Student',
+        'The team at Ak stack.ai exceeded our expectations with their technical skills and professional approach.',
+      avatarName: 'Stark',
       ratings: '4.5',
     },
     {
-      testimonialThumb: '/images/testimonial_1.jpeg',
+      testimonialThumb: '/images/testimonial_4.jpg',
       testimonialText:
-        'As a computer science student, I was always intimidated by report writing. yourprojects.ai made it so much easier and the report was ready in just a few clicks. Im grateful for this tool',
-      avatarName: 'Alex',
-      avatarDesignation: 'Computer Science Student',
+        'Outstanding service and top-notch development from Ak stack.ai. Highly recommend!',
+      avatarName: 'Emily',
       ratings: '4.5',
     },
   ];
@@ -110,7 +106,6 @@ export default function TestimonialSlider() {
                     <Testimonial
                       testimonialText={item.testimonialText}
                       avatarName={item.avatarName}
-                      avatarDesignation={item.avatarDesignation}
                       ratings={item.ratings}
                     />
                   </Div>

@@ -34,7 +34,6 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="Academic Projects<br/>Just in SECONDS."
         subtitle=" From robust software that streamlines your business processes to stunning websites that captivate and engage your audience, I provide comprehensive digital solutions designed to enhance your online presence and boost your productivity. Partner with me to transform your ideas into reality and stay ahead in the digital age."
         btnText="Start Your Project"
         btnLink="/start-your-project"
@@ -65,7 +64,7 @@ export default function Home() {
                 title="Services I can provide you"
                 subtitle="I Can Help You With"
                 btnText="See All Services"
-                btnLink="/service"
+                btnLink="/our-service"
               />
               <Spacing lg="90" md="45" />
             </Div>
@@ -74,8 +73,8 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Website Development"
-                    link="/service/website-development"
+                    title="Product Development"
+                    link="/service/product-development"
                     src="/images/service_1.jpeg"
                     alt="Service"
                   />
@@ -84,8 +83,8 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Product Development"
-                    link="/service/product-development"
+                    title="Application Development"
+                    link="/service/application-development"
                     src="/images/service_2.jpeg"
                     alt="Service"
                   />
@@ -93,8 +92,8 @@ export default function Home() {
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Software Development"
-                    link="/service/software-development"
+                    title="Website Development"
+                    link="/service/website-development"
                     src="/images/photox.jpeg"
                     alt="Service"
                   />
@@ -155,7 +154,7 @@ export default function Home() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Generate Automated Report Download PDF & Enjoy!" />
+      <MovingText text="A powerful Tool Designed to Streamline and Enhance the Software Development." />
       <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
 

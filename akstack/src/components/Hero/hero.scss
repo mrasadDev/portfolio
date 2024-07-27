@@ -31,6 +31,30 @@
     left: 11px;
   }
 }
+
+
+.displayText {
+  height: 200px;
+  width: 100%;
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+.text-main {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+}
+.heroTextMove {
+  text-align: center;
+  background: #ff4a17;
+  background-clip: text;
+  line-height: 1.2;
+  font-weight: 700;
+  color: transparent;
+  display: inline;
+}
+
+
 .cs-hero_social_links {
   list-style: none;
   margin: 0;

@@ -21,19 +21,19 @@ export default function Footer() {
   const serviceMenu = [
     {
       title: "Product Development",
-      href: "/product-development",
+      href: "/service/product-development",
     },
     {
       title: "Application development",
-      href: "/application-development",
+      href: "/service/application-development",
     },
     {
       title: "Website Development",
-      href: "/website-development",
+      href: "/service/website-development",
     },
     {
       title: "MobileApp Development",
-      href: "/mobileapp-development",
+      href: "/service/mobile-app-development",
     },
   ];
 

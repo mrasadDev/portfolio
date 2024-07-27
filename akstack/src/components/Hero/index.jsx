@@ -2,9 +2,9 @@ import parse from 'html-react-parser';
 import './hero.scss';
 import Button from '../Button';
 import Div from '../Div';
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero({
-  title,
   subtitle,
   btnText,
   btnLink,
@@ -21,7 +21,19 @@ export default function Hero({
       <Div className="cs-shape_1" />
       <Div className="container">
         <Div className="cs-hero_text">
-          <h1 className="cs-hero_title">{parse(title)}</h1>
+        <div className="displayText">
+            <div className="text-main">We Deliver</div>
+            <TypeAnimation
+              sequence={[
+                "Software Solutions.",
+                2000,
+                "Digital Briliance.",
+                2000,
+              ]}
+              repeat={Infinity}
+              className="heroTextMove"
+            />
+          </div>
           <Div className="cs-hero_info">
             <Div>
               <Button btnLink={btnLink} btnText={btnText} />

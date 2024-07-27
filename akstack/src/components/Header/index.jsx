@@ -46,24 +46,24 @@ export default function Header({ variant }) {
                     </li>
                     <li>
                       <NavLink
-                        to="case-study-showcase"
+                        to="/about"
                         onClick={() => setMobileToggle(false)}
                       >
                         About
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink
-                        to="service"
+                      <Link
+                        to="/our-service"
                         onClick={() => setMobileToggle(false)}
                       >
                         What we do ?
-                      </NavLink>
+                      </Link>
                       <DropDown>
                         <ul>
                           <li>
                             <Link
-                              href="/product-development"
+                              to="/service/product-development"
                               onClick={() => setMobileToggle(false)}
                             >
                               Product Development
@@ -71,7 +71,7 @@ export default function Header({ variant }) {
                           </li>
                           <li>
                             <Link
-                              href="/application-development"
+                              to="/service/application-development"
                               onClick={() => setMobileToggle(false)}
                             >
                               Application Development
@@ -79,7 +79,7 @@ export default function Header({ variant }) {
                           </li>
                           <li>
                             <Link
-                              href="/website-development"
+                              to="/service/website-development"
                               onClick={() => setMobileToggle(false)}
                             >
                               Website Development
@@ -87,7 +87,7 @@ export default function Header({ variant }) {
                           </li>
                           <li>
                             <Link
-                              href="/mobileapp-development"
+                              to="/service/mobile-app-development"
                               onClick={() => setMobileToggle(false)}
                             >
                               Mobile App Development
@@ -98,7 +98,7 @@ export default function Header({ variant }) {
                     </li>
                     <li>
                       <NavLink
-                        to="/faq"
+                        to="/start-your-project"
                         onClick={() => setMobileToggle(false)}
                       >
                         Start Your Project
