@@ -1,3 +1,3 @@
-export const pageTitle = (title) => {
-  return ( document.title = title + " - Creative Agency");
+export const pageTitle = () => {
+  return ( document.title = "Ak stack.ai Software Development Agency");
 }
